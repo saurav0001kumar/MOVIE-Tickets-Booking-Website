@@ -1,0 +1,80 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        .btn{
+            border-color: rgb(148, 13, 13);
+            color: rgb(255, 30, 30);
+            transition: all 0.5s;
+            font-size: 28px;
+            }
+        .btn{background: rgb(255, 0, 0);
+            color: white;
+            cursor: pointer;
+        }
+        ​.btn:hover {background-color: #e04545}
+        .btn span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          .btn span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+          }
+          .btn:hover span {
+            padding-right: 25px;
+          }
+          .btn:hover span:after {
+            opacity: 1;
+            right: 0;
+          }
+    </style>
+    <style type="text/css">
+        .blinking{
+            animation:blinkingText 1.2s infinite;
+        }
+        @keyframes blinkingText{
+           80%{	color: #F00;	}
+            50%{	color: rgb(5, 212, 74);	}
+            30%{	color: rgb(212, 212, 3);	}
+        }
+            </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill your details!</title>
+</head>
+<body bgcolor="#D6EAF8">
+    <marquee bgcolor="#000000" style="color: #FFFFFF; font-size: xx-large; ; font-family: Book Antiqua" behavior="alternate" style=" scroll-behavior: smooth; " scrollamount="300">/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\</marquee>
+    <br><br><br><br>
+    <center> <h1> Enter your details to continue booking your movie ticket :  </h1> </center>
+   <br>
+    <center>
+        
+            <form method="POST"> 
+            {% csrf_token %} 
+        <font style="font-size:x-large;"> 
+            {{ user.as_p }} {{ form.as_p }} 
+        </font>
+        <br><br>
+            <button type="submit" class="btn"><span>&nbsp; Pay & BOOK NOW &nbsp; </span></button>
+             
+        </form> 
+       
+        <br> 
+        <a href="/index/"><h3><< Click here to return Home</h3></a>
+</center>
+    
+     <br><br><br>
+    <marquee bgcolor="#001180" style="color: #FFFFFF; font-size:xx-large; font-family: Book Antiqua" behavior="alternate" style=" scroll-behavior: smooth; " scrollamount="300">/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\</marquee>
+</body>
+</html>

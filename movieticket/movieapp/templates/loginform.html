@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <head>
+        <title>Login form</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'loginform.css' %}">
+    </head>
+<body>
+    <div class="logbox">
+        <br>
+        <br>
+      <form>
+         <p>Username</p>
+         <input type="text" name="" placeholder="Enter user name">
+         <p>Password</p>
+         <input type="password" name="" placeholder="Enter password"><br><br>
+         <input type="submit" name="" value="login"><br>
+         Don't have an account.Create
+         <a class="noid" href="{% static '#' %}'"> HERE</a>
+     </form>  
+    </div>
+</body>
+</html>

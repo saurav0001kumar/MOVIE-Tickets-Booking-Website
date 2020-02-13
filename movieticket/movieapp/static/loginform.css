@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(images/img4.jpg);
+    font-family: sans-serif;
+    
+    }
+.logbox{
+    width: 320px;
+    height: 350px;
+    background: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    color: aliceblue;
+    padding: 70px 30px;
+    border-radius: 15%;
+}
+.logo{
+    height: 50;
+    width: auto;
+    border-radius:50%;
+    position: absolute;
+    top: -20;
+    left: calc(50% - 30px);
+}
+h1
+{
+    margin:0;
+    padding-top:-20; 
+    padding-bottom: 45;
+    font-size: 22px;
+    text-align: center;
+    color:aliceblue;
+}
+.logbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.logbox input
+{
+    width:100%;
+    margin-bottom: 30;
+}
+.logbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: aliceblue;
+    font-feature-settings: normal;
+    font-size: 16;
+}
+.logbox input[type="submit"]
+{
+
+    border:none;
+    outline: none;
+    height: 40px;
+    background: crimson;
+    color: aqua;
+    font-size: 18;
+    border-radius: 20px;
+}
+.logbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background-color: chocolate;
+    color: blanchedalmond;
+}
+.noid{
+    color: aqua;
+    text-decoration:inherit;
+    
+}  
+.noid:hover{
+    color: burlywood;
+}

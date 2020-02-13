@@ -1,0 +1,145 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        .btn{
+            border-color: rgb(207, 0, 0);
+            color: dodgerblue;
+            transition: all 0.5s;
+            font-size: 28px;
+            }
+        .btn{background: rgb(255, 36, 36);
+            color: white;
+            cursor: pointer;
+        }
+        ​.btn:hover {background-color: #e04545}
+        .btn span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          .btn span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+          }
+          .btn:hover span {
+            padding-right: 25px;
+          }
+          .btn:hover span:after {
+            opacity: 1;
+            right: 0;
+          }
+    </style>
+    <style type="text/css">
+        .blinking{
+            animation:blinkingText 1.2s infinite;
+        }
+        @keyframes blinkingText{
+           80%{	color: #F00;	}
+            50%{	color: rgb(5, 212, 74);	}
+            30%{	color: rgb(212, 212, 3);	}
+        }
+            </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Team</title>
+</head>
+<body bgcolor="#F9E79F">
+    <marquee bgcolor="#000000" style="color: #FFFFFF; font-size: xx-large; ; font-family: Book Antiqua" behavior="alternate" style=" scroll-behavior: smooth; " scrollamount="300">/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\</marquee>
+	
+	<center>
+        <br>
+        <h3> <font face="Verdana" color="darkblue">    TEAM  DETAILS   </font></h3>
+        
+        <div>
+           
+                    <!-- <img src="{{baseUrl}}/p{{d.image}}" alt=""> -->
+					<font size="10">VAT Project : Django using Python </font>
+					
+                    <h3> <font face="Verdana" color="darkblue">   Project Topic: MOVIE TICKET BOOKING WEBSITE    </font></h3>
+                   
+                    <font face="Courier New" size=10 color="Blue" ><span class="blinking" ><b> Guided By : DEEPA ASHOK KUMAR </b></span></font>
+<font face="Courier New" size=10 color="Blue" ><span class="blinking" ><b>{{d.name}}</b></span></font>
+                    
+                    <table border="1px" align="center" cellpadding="10px" cellspacing="1px" style="font-size:larger;">
+                        <tr>
+							<th>S.No.</th> 
+							<th>Student name</th>
+							<th>Class Roll</th>
+							<th>Stream</th>
+							<th>Section</th>
+							<th>Email</th>
+							<th>Website / Social Media LINK</th>
+						</tr>
+						<tr><td>1</td>
+							<td>SAURAV  &nbsp; KUMAR</td>
+							<td>34</td>
+							<td>CSE</td>
+							<td>A</td>
+							<td>saurav0001kumar@gmail.com</td>
+							<td><a href="https://saurav0001kumar.ml">https://saurav0001kumar.ml</a></td>
+                        </tr>
+						<tr><td>2</td>
+							<td>SHEKHAR &nbsp; KUMAR</td>
+							<td>30</td>
+							<td>CSE</td>
+							<td>A</td>
+							<td>rkshekhar015@gmail.com</td>
+							<td><a href="https://www.linkedin.com/in/shekhar2608">https://www.linkedin.com/in/shekhar2608</a></td>
+						</tr>
+						<tr><td>3</td>
+							<td>RITTU  &nbsp; DUTTA</td>
+							<td>46</td>
+							<td>CSE</td>
+							<td>A</td>
+							<td>duttarittu@gmail.com</td>
+							<td><a href="https://www.facebook.com/rittu.dutta.9">https://www.facebook.com/rittu.dutta.9</a></td>
+						</tr>
+						<tr><td>4</td>
+							<td>VIVEK  &nbsp; KUMAR</td>
+							<td>01</td>
+							<td>CSE</td>
+							<td>A</td>
+							<td>vk20362036@gmail.com</td>
+							<td><a href="https://www.linkedin.com/in/vivek-kumar-12a27817b">https://www.linkedin.com/in/vivek-kumar-12a27817b</a></td>
+					
+						</tr>
+						<tr><td>5</td>
+							<td>SURAJ  &nbsp; KUMAR</td>
+							<td>09</td>
+							<td>CSE</td>
+							<td>A</td>
+							<td>suraj775776@gmail.com</td>
+							<td><a href="https://www.linkedin.com/in/suraj-kumar-544418185">https://www.linkedin.com/in/suraj-kumar-544418185</a></td>
+						</tr>
+						<tr><td>6</td>
+							<td>SUMIT &nbsp; SHEKHAR</td>
+							<td>11</td>
+							<td>CSE</td>
+							<td>A</td>
+							<td>sumitshekhar2016@gmail.com</td>
+							<td><a href="https://sumitsinha.com">https://sumitsinha.com</a></td>
+                        </tr>
+
+                        
+                    </table>
+                   
+                   
+                    <a href="/index/"><h3><< Click here to goto HOME</h3></a>
+               
+        </div>
+    </center>
+
+
+    <marquee bgcolor="#001180" style="color: #FFFFFF; font-size:xx-large; font-family: Book Antiqua" behavior="alternate" style=" scroll-behavior: smooth; " scrollamount="300">/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\</marquee>
+</body>
+</html>

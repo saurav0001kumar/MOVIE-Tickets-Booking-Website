@@ -1,0 +1,107 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        .btn{
+            border-color: rgb(207, 0, 0);
+            color: dodgerblue;
+            transition: all 0.5s;
+            font-size: 28px;
+            }
+        .btn{background: rgb(255, 36, 36);
+            color: white;
+            cursor: pointer;
+        }
+        ​.btn:hover {background-color: #e04545}
+        .btn span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          .btn span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+          }
+          .btn:hover span {
+            padding-right: 25px;
+          }
+          .btn:hover span:after {
+            opacity: 1;
+            right: 0;
+          }
+    </style>
+    <style type="text/css">
+        .blinking{
+            animation:blinkingText 1.2s infinite;
+        }
+        @keyframes blinkingText{
+           80%{	color: #F00;	}
+            50%{	color: rgb(5, 212, 74);	}
+            30%{	color: rgb(212, 212, 3);	}
+        }
+            </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+</head>
+<body bgcolor="#FFFDD0">
+    <marquee bgcolor="#000000" style="color: #FFFFFF; font-size: xx-large; ; font-family: Book Antiqua" behavior="alternate" style=" scroll-behavior: smooth; " scrollamount="300">/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\</marquee>
+    <center>
+        <br>
+        <h3> <font face="Verdana" color="darkblue">    MOVIE  DETAILS   </font></h3>
+        
+        <div>
+           
+                    <!-- <img src="{{baseUrl}}/p{{d.image}}" alt=""> -->
+                    <font size="15">Movie Name : &nbsp;</font>
+<font face="Courier New" size=10 color="Blue" ><span class="blinking" ><b>{{d.name}}</b></span></font>
+                    <br><br>
+                    <table border="1px" align="center" cellpadding="10px" cellspacing="1px" style="font-size:larger;">
+                        <tr>
+                            <th>Movie TYPE :</th> <td>{{d.type}}</td>
+                        </tr>
+                        <tr>
+                            <th>Released Date :</th> <td>{{d.date}}</td>
+                        </tr>
+                        <tr>
+                            <th>Movie Language :</th> <td>{{d.language}}</td>
+                        </tr>
+                        <tr>
+                            <th>Rating :</th> <td>{{d.rating}}</td>
+                        </tr>
+                        <tr>
+                            <th>Movie Runtime :</th> <td>{{d.duration}}</td>
+                        </tr>
+                        <tr>
+                            <th>Lead CAST :</th> <td>{{d.cast}}</td>
+                        </tr>
+                        <tr>
+                            <th>Ticket PRICE:</th> <th>₹ {{d.price}}</th>
+                        </tr>
+                        <tr>
+                            <th>Movie Trailer :</th> <td><a href="{{d.trailer}}">Click Here to Watch Trailer now</a></td>
+                        </tr>
+
+                        
+                    </table>
+                    <br>
+                    <button onclick="window.location.href = '/signup/';"
+                    class="btn"><span>&nbsp; BOOK NOW &nbsp; </span></button>
+                    <br>
+                    <a href="/index/"><h3><< Click here to goto Home</h3></a>
+               
+        </div>
+    </center>
+    <br>
+    <marquee bgcolor="#001180" style="color: #FFFFFF; font-size:xx-large; font-family: Book Antiqua" behavior="alternate" style=" scroll-behavior: smooth; " scrollamount="300">/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\</marquee>
+</body>
+</html>

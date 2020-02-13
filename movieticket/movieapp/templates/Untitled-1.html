@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .btn{
+            border-color: rgb(207, 0, 0);
+            color: dodgerblue;
+            transition: all 0.5s;
+            font-size: 28px;
+            }
+        .btn{background: rgb(255, 36, 36);
+            color: white;
+            cursor: pointer;
+        }
+        ​.btn:hover {background-color: #e04545}
+        .btn span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          .btn span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+          }
+          .btn:hover span {
+            padding-right: 25px;
+          }
+          .btn:hover span:after {
+            opacity: 1;
+            right: 0;
+          }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Untitled-2.CSS' %}"> 
+    <h1>MEET OUR TEAM</h1>
+</head>
+<body>
+    <div class="all">
+        <div class="box"><img src="{% static 'sourav.png' %}"><p>SAURAV<br> KUMAR</p></div>
+        <div class="box"><img src="{% static 'rdutta.jpg' %}"><p>RITTU <br>DUTTA</p><</div>
+        <div class="box"><img src="{% static 'vivek.jpeg' %}"><p>VIVEK<br> KUMAR</p></div>
+        <div class="box"><img src="{% static 'sumit.jpeg' %}"><p>SUMIT<br>SEKHAR</p></div>
+        <div class="box"><img src="{% static 'suraj.jpeg' %}"><p>SURAJ<br>KUMAR</p></div>
+        <div class="box"><img src="{% static 'sekhar.jpeg' %}"><p>SHEKHAR<br>KUMAR</p></div>
+    </div>
+    <div>
+        <center>  <button onclick="window.location.href = '/index/';"
+        class="btn"><span>&nbsp; << GOTO HOME &nbsp; </span></button>
+        <br><br>
+        <a href="/aboutmore/"><h2> <font color="yellow" face="Verdana" >MORE TEAM DETAILS >></font></h2></a></div></center>
+      
+</body>
+</html>
