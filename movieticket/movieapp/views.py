@@ -26,6 +26,10 @@ def signup(request):
     else:
         form=regForm()
         return render(request,'signup.html',{'form':form})
+    
+    
+    
+    
 
 def booked(request):
     ob=reg.objects.all()
