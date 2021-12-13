@@ -13,10 +13,6 @@ Movie tickets booking website using Django (Python Web framework).
 
 >  pip install Pillow  
 
->  pip install django-widget-tweaks  
-
->  pip install reportlab  
-
 * ### After successful installation of all packages, run the follwing Django commands :
 
 >  py manage.py migrate  
