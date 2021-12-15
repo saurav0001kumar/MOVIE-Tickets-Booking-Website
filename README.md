@@ -5,7 +5,7 @@ Movie tickets booking website using Django (Python Web framework).
 
 * ### Fork this repository and clone the forked repository.
 
-* ### Change the working directory to the folder where you downloaded the files & go under "djangop" directory.
+* ### Change the working directory to the folder where you downloaded the files & go under "movieticket" directory.
 
 * ### Install all the dependencies for this repository using the pip command :
 
